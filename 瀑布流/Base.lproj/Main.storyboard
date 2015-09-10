@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dcz-Mo-Oyp">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="CLB-0S-hqr">
+            <objects>
+                <collectionViewController id="dcz-Mo-Oyp" customClass="ViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="L3W-FI-5P7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5bE-qB-YRM" customClass="WaterFallLayout">
+                            <size key="itemSize" width="146" height="178"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="0YD-Lk-7bC" customClass="ShopCell">
+                                <rect key="frame" x="0.0" y="0.0" width="146" height="178"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="146" height="178"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KbK-NW-uig">
+                                            <rect key="frame" x="0.0" y="0.0" width="146" height="178"/>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="haO-c7-Z90">
+                                            <rect key="frame" x="0.0" y="148" width="146" height="30"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngF-6y-3I2">
+                                                    <rect key="frame" x="0.0" y="7" width="146" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="8CM-ma-bWQ"/>
+                                                <constraint firstItem="ngF-6y-3I2" firstAttribute="centerY" secondItem="haO-c7-Z90" secondAttribute="centerY" id="EzV-mk-y4P"/>
+                                                <constraint firstAttribute="trailing" secondItem="ngF-6y-3I2" secondAttribute="trailing" id="Tbs-cq-CSL"/>
+                                                <constraint firstItem="ngF-6y-3I2" firstAttribute="leading" secondItem="haO-c7-Z90" secondAttribute="leading" id="jWn-4q-bc4"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="KbK-NW-uig" firstAttribute="leading" secondItem="0YD-Lk-7bC" secondAttribute="leading" id="5Hp-hW-J6Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="haO-c7-Z90" secondAttribute="trailing" id="HAN-4M-c3q"/>
+                                    <constraint firstAttribute="trailing" secondItem="KbK-NW-uig" secondAttribute="trailing" id="OhP-nB-jLR"/>
+                                    <constraint firstItem="haO-c7-Z90" firstAttribute="leading" secondItem="0YD-Lk-7bC" secondAttribute="leading" id="QRY-kQ-Rr7"/>
+                                    <constraint firstAttribute="bottom" secondItem="haO-c7-Z90" secondAttribute="bottom" id="SOS-11-N3Y"/>
+                                    <constraint firstAttribute="bottom" secondItem="KbK-NW-uig" secondAttribute="bottom" id="aiQ-7U-IQA"/>
+                                    <constraint firstItem="KbK-NW-uig" firstAttribute="top" secondItem="0YD-Lk-7bC" secondAttribute="top" id="cjL-HW-b2k"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="KbK-NW-uig" id="zOW-ZN-MGV"/>
+                                    <outlet property="priceLabel" destination="ngF-6y-3I2" id="Z7c-t4-fld"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="dcz-Mo-Oyp" id="2P6-Xq-uec"/>
+                            <outlet property="delegate" destination="dcz-Mo-Oyp" id="7UF-LE-LRb"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <outlet property="layout" destination="5bE-qB-YRM" id="5pC-ud-B30"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8N5-MB-U31" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="264" y="176"/>
+        </scene>
+    </scenes>
+</document>
